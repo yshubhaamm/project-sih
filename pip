@@ -1,0 +1,666 @@
+html code:[index.html]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Indian Culture</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#places">Places</a></li>
+                <li><a href="#chatbot">Ticket Booking</a></li>
+            </ul>
+            <form class="search-form">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Welcome to Indian Cultural Explorer</h1>
+        <p>Discover the rich heritage and culture of India</p>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <h2>About Indian Culture</h2>
+            <p>Indian culture is one of the oldest and most diverse in the world. From the ancient civilizations of the Indus Valley to the vibrant and dynamic modern culture, India has a rich and varied cultural heritage.</p>
+            <a href="explore.html" class="cta-button">Explore more places</a>
+        </div>
+    </section>
+
+    <!-- Uncomment and update as necessary
+    <section id="places">
+        <h2>Places to Visit</h2>
+        <div class="places-container">
+            <div class="place">
+                <img src="tajmahal.jpg" alt="Taj Mahal">
+                <h3>Taj Mahal</h3>
+                <p>One of the Seven Wonders of the World, located in Agra.</p>
+            </div>
+            <div class="place">
+                <img src="varanasi.jpg" alt="Varanasi">
+                <h3>Varanasi</h3>
+                <p>The spiritual capital of India, famous for its ghats and temples.</p>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <section id="chatbot" class="chatbot-section">
+        <div class="iphone-mockup">
+            <div class="chatbot-container">
+                <h2>Book Your Tickets with Ease</h2>
+                <p>Planning to explore the rich history and culture of India? Our chatbot makes booking your tickets to top museums effortless. Click the button below to start a chat and secure your tickets today!</p>
+                <div class="button-wrapper">
+                    <button onclick="startChat()" class="chatbot-button">Start Chat</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Indian Cultural Explorer. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function startChat() {
+            alert("Chatbot function will be integrated here.");
+        }
+    </script>
+</body>
+</html>
+css code:[styles.css]
+/* General styles */
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #ff6f61;
+    padding: 10px 20px;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffecb3;
+    text-decoration: underline;
+}
+
+.search-form {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #e55a4f;
+}
+
+.hero {
+    background-image: url('india-culture-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero p {
+    font-size: 1.5em;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#about {
+    background: url('about-culture-background.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.about-container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e55a4f;
+    transform: scale(1.05);
+}
+
+#places {
+    background-color: #e8e8e8;
+}
+
+.places-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.chatbot-section {
+    padding: 0; /* Remove default padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.iphone-mockup {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 375px; /* iPhone screen width */
+    height: 667px; /* iPhone screen height */
+    border: 16px solid #333; /* Simulates iPhone border */
+    border-radius: 36px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    background-color: #fff; /* White background for the iPhone */
+    overflow: hidden;
+    background-image: url('smartphone-background.jpg'); /* Add your background image URL */
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.iphone-mockup::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 60px;
+    height: 6px;
+    background: #333;
+    border-radius: 3px;
+    transform: translateX(-50%);
+}
+
+.chatbot-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.chatbot-container h2 {
+    font-size: 1.4em; /* Adjusted font size */
+    margin: 0 0 15px 0; /* Adjusted margin */
+    font-weight: 700;
+}
+
+.chatbot-container p {
+    font-size: 1em; /* Adjusted font size */
+    line-height: 1.4;
+    margin: 0 0 20px 0; /* Adjusted margin */
+}
+
+.button-wrapper {
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.chatbot-button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 15px 30px; /* Adjusted padding */
+    font-size: 1.1em; /* Adjusted font size */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.chatbot-button:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #e55a4f;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .place {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .place {
+        width: 100%;
+    }
+}
+
+
+
+explore.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="explore.css">
+    <title>Explore Indian Culture</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#places">Places</a></li>
+                <li><a href="#chatbot">Ticket Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+           
+        </div>
+    </section>
+
+    <section id="places" class="places-overlay">
+        <h2>Places to Visit</h2>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="tajmahal.jpg" alt="Taj Mahal"></div>
+                <div class="slide"><img src="varanasi.jpg" alt="Varanasi"></div>
+                <div class="slide"><img src="image2.jpg" alt="Place 3"></div>
+                <div class="slide"><img src="image3.jpg" alt="Place 4"></div>
+                <div class="slide"><img src="image4.jpg" alt="Place 5"></div>
+                <div class="slide"><img src="image5.jpg" alt="Place 6"></div>
+                <div class="slide"><img src="image6.jpg" alt="Place 7"></div>
+                <div class="slide"><img src="image7.jpg" alt="Place 8"></div>
+                <div class="slide"><img src="image8.jpg" alt="Place 9"></div>
+                <div class="slide"><img src="image9.jpg" alt="Place 10"></div>
+                <div class="slide"><img src="image10.jpeg" alt="Place 11"></div>
+                <div class="slide"><img src="image11.jpeg" alt="Place 12"></div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Indian Cultural Explorer. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="slider.js"></script> <!-- Add this line to include the JavaScript -->
+</body>
+</html>
+
+
+
+explore.css
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #ff6f61;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffecb3; /* Light color for hover effect */
+    text-decoration: underline;
+}
+
+.hero {
+    background-image: url('india-culture-background.jpg'); /* Update with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps background fixed on scroll */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay to improve text readability */
+    z-index: 1;
+}
+
+.hero h1, .hero p {
+    position: relative; /* Ensure text is above the overlay */
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3em; /* Adjusted font size for prominence */
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+#places {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: transparent; /* Changed to transparent */
+    text-align: center;
+    z-index: 3; /* Increased z-index to place above hero */
+}
+
+.places-overlay {
+    text-align: center;
+}
+
+#places h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: white; /* Changed text color to white */
+}
+
+.slider {
+    position: relative; /* Changed to relative */
+    width: 100%;
+    max-width: 1000px; /* Adjust based on desired slider width */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slide img {
+    width: 100%; /* Ensures the image fills the container's width */
+    height: 400px; /* Adjusted height for the images */
+    object-fit: cover; /* Maintains aspect ratio */
+    display: block; /* Remove extra space below image */
+    border-radius: 5px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2em;
+    z-index: 3;
+    border-radius: 50%; /* Rounded buttons */
+    box-shadow: none; /* Remove shadow from buttons */
+}
+
+button.prev {
+    left: 10px; /* Adjust as needed */
+}
+
+button.next {
+    right: 10px; /* Adjust as needed */
+}
+
+@media (max-width: 768px) {
+    #places {
+        padding: 20px;
+    }
+
+    .slider {
+        max-width: 90%; /* Adjust slider width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #places {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1.5em; /* Adjust button size for smaller screens */
+    }
+
+    .slide img {
+        height: 250px; /* Adjust image height for smaller screens */
+    }
+}
+
+
+
+
+explore.js
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelector('.slides');
+    const slideCount = document.querySelectorAll('.slide').length;
+    let index = 0;
+
+    function updateSlider() {
+        const offset = -index * 100;
+        slides.style.transform = `translateX(${offset}%)`;
+    }
+
+    document.querySelector('.next').addEventListener('click', function() {
+        index = (index + 1) % slideCount;
+        updateSlider();
+    });
+
+    document.querySelector('.prev').addEventListener('click', function() {
+        index = (index - 1 + slideCount) % slideCount;
+        updateSlider();
+    });
+});
+
